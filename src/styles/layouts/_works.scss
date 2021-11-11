@@ -1,0 +1,76 @@
+.works-block {
+  .portfolio-list {
+    > div {
+      padding: 15px;
+      overflow: hidden;
+
+      @media only screen and (max-width: 767px) {
+				padding: 0 10px 20px;
+			}
+
+      .portfolio-wrapper {
+        overflow: hidden;
+        position: relative !important;
+        cursor: pointer;
+        height: auto;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        top: 0;
+        transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+
+      .label {
+        position: absolute;
+        height: 60px;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        color: #fff;
+      }
+
+      h3 {
+        margin-bottom: 5px;
+        color: $white;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 12px;
+      }
+
+      &:hover {
+        .label {
+          bottom: 0;
+        }
+
+        img {
+          transform: scale(1.08);
+        }
+      }
+    }
+
+    .label {
+      font-size: 100%;
+    }
+  }
+
+  .pagination {
+  	justify-content: center;
+    margin-top: 25px;
+
+  	.page-item {
+  		.page-link {
+  			padding: 8px 15px 10px;
+  		}
+  	}
+  }
+}

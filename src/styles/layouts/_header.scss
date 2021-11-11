@@ -1,73 +1,88 @@
 // header
 #header {
-  padding: 10px 0;
+  padding: 10px 20px;
   position: fixed;
-  background: red;
   left: 0;
   right: 0;
   z-index: 999;
-  background: $lightblue;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.5s linear;
+  background: $primary;
+
+  @media only screen and (max-width: 1200px) {
+		padding: 10px 0;
+	}
 
   .navbar {
-    padding: 0;
+    padding: 0 10px;
     justify-content: space-between;
   }
 
   .navbar-brand {
-    color: $red;
+    color: $black;
     text-transform: uppercase;
     font-weight: 600;
-    height: auto;
+    font-size: 26px;
     padding: 0;
-    font-size: 28px;
     line-height: 1.6;
+    height: auto;
   }
 
   .navbar-collapse {
     flex-grow: 0;
 
     .navbar-nav {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 20px;
 
-      .nav-item {
-			padding: 0 10px 5px;
+			@media only screen and (max-width: 767px) {
+				margin: 0;
+			}
+    }
 
-        a {
-          padding: 0;
-          color: lighten($black, 10%);
-          position: relative;
+    .nav-item {
+      padding: 0 10px;
 
-          &:hover {
-            background: none;
-            color: red;
+      @media only screen and (max-width: 992px) {
+				float: none;
+				display: block;
+				padding:7px 0;
+			}
 
-            &:before {
-              right: 0;
-              left: 0;
-              opacity: 1;
-            }
-          }
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        padding: 0;
+        color: rgba($black, 0.8);
+        position: relative;
+
+        &:hover {
+          opacity: 0.6;
 
           &:before {
-            content: "";
-            background: $red;
-            height: 1px;
-            position: absolute;
-            bottom: -1px;
-            left: -10px;
-            right: 100%;
-            transition: all 0.3s linear;
-            opacity: 0;
+            right: 0;
+            left: 0;
+            opacity: 1;
           }
         }
 
-        &.active {
+        &:before {
+          content: "";
+          background: $black;
+          height: 1px;
+          position: absolute;
+          bottom: -1px;
+          right: 100%;
+          transition: all 0.3s linear;
+          opacity: 0;
+        }
+      }
+
+      &.active {
 				> a {
-					background: none;
-					color: $red;
+          opacity: 0.6;
 
 					&:before {
 						right: 0;
@@ -76,7 +91,6 @@
 					}
 				}
 			}
-      }
     }
   }
 }

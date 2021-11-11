@@ -1,3 +1,16 @@
-@import './base/variables';
+@import "./base/variables";
+@import "./base/mixin";
+@import "./base/common";
+@import "./base//helpers";
 
-@import './layouts/header'
+@import "./layouts/header";
+@import "./layouts/intro";
+@import "./layouts/about";
+@import "./layouts/services";
+@import "./layouts/works";
+@import "./layouts/teams";
+@import "./layouts/testimonial";
+@import "./layouts/pricing";
+@import "./layouts/blog";
+@import "./layouts/contact";
+@import "./layouts/footer";

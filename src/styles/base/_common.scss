@@ -1,0 +1,129 @@
+// wrapper
+#wrapper{
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+// container
+.container-fluid{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+
+.block {
+  padding: 70px 0;
+  border-bottom: 1px solid lighten($black, 70%);
+}
+
+.title-holder {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h2 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    color: lighten($black, 60%);
+    font-style: italic;
+
+    &:before,
+    &:after {
+      content: " - ";
+    }
+  }
+}
+
+ul {
+  @extend %listreset;
+}
+
+// social media
+.socials {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  ul {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+  }
+
+  a {
+    @include size(35px);
+    color: $primary;
+    background: $white;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    padding: 2px;
+    transition: background 0.3s linear, color 0.3s linear;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+
+  .fab {
+    line-height: 2;
+  }
+}
+
+// input box
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+textarea {
+  background: $white;
+  border: 1px solid lighten($black, 60%);
+  margin: 0;
+  padding: 5px 15px;
+  width: 100%;
+  height: 47px;
+  color: lighten($black, 30%);
+  font-size: 16px;
+  line-height: 20px;
+
+  @include placeholder {
+    color: lighten($black, 50%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .newsletter-block & {
+    border: 0;
+  }
+}
+
+textarea {
+  height: 150px;
+  min-height: 150px;
+  resize: vertical;
+  margin: 15px 0;
+  padding: 10px 15px;
+}
+
+// go top
+.go-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #000;
+  background: $primary;
+  padding: 0 6px;
+  font-size: 22px;
+}

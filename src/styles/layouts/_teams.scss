@@ -1,0 +1,72 @@
+.team-block {
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  .row {
+    margin: 0 -15px 50px;
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin: 0 -15px;
+    }
+  }
+
+  [class*="col-"] {
+    @media only screen and (max-width: 767px) {
+			padding-bottom: 20px;
+		}
+
+    &:hover {
+      .overlay {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .image {
+    margin: 0 0 20px;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: 767px) {
+			max-width: 350px;
+			margin: 0 auto 20px;
+		}
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all 0.3s linear;
+      vertical-align: middle;
+      background: rgba($primary, 0.8);
+      opacity: 0;
+    }
+  }
+
+  h3 {
+    margin: 0 0 5px;
+  }
+
+  .designation {
+    display: block;
+    font-style: italic;
+    margin: 0 0 20px;
+
+    @media only screen and (max-width: 767px) {
+			margin: 0;
+		}
+  }
+}
